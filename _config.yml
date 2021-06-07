@@ -13,7 +13,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://lyx-overwatch.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -36,12 +36,15 @@ external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
 post_asset_folder: true
+marked:
+  prependRoot: false
+  postAsset: true
 relative_link: false
 future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace:
 
 # Home page setting
@@ -51,7 +54,7 @@ highlight:
 index_generator:
   path: ''
   per_page: 4
-  order_by: -date
+  order_by: -updated
 
 # Category & Tag
 default_category: uncategorized
@@ -65,10 +68,9 @@ tag_map:
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 updated_option: date
-
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 3
+per_page: 4
 pagination_dir: page
 
 # Extensions
@@ -88,7 +90,7 @@ jsonContent:
   pages: false
   posts:
     title: true
-    date: false
+    date: true
     path: true
     text: false
     raw: false
